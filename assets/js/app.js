@@ -15,7 +15,7 @@ function changeContent(e){
 }
 
 function getContent(id){
-    fetch('../../data.json')
+    fetch('../../data.js')
         .then(res => res.json())
         .then(data => {
 
@@ -34,7 +34,7 @@ function getContent(id){
 function filterContent(element){
     const inputValue = input.value
 
-    fetch('../../data.json')
+    fetch('../../data.js')
         .then(res => res.json())
         .then(data => {
             data.filter(e => {
