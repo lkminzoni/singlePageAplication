@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  max-width: 800px;
+  min-height: 100vh;
+  margin: auto;
+  background: linear-gradient(to right top, #b96292, #3f773f);
+}
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  text-align: center;
+  background: #fff;
+  margin: 35px 15px 0 15px;
+  border-radius: 15px 15px 0 0;
+}
+
+.content {
+  display: flex;
+  padding: 20px;
+  background: #fff;
+  border-radius: 0 0 15px 15px;
+  margin: 0 15px;
+}
+
+.main-text-title {
+  text-align: center;
+}
+
+.main-text-body {
+  text-align: justify;
+}
+
+.img-content {
+  max-width: 50%;
+}
+
+#show-img {
+  height: 50%;
+  border-radius: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.navbar-item {
+  list-style: none;
+  background-color: #13f78c;
+  padding: 0.6rem 1.4rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.navbar-item:hover {
+  cursor: pointer;
+}
+
+.navbar-item a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.active {
+  background-color: #001b0f;
+}
+
+/*  */
+.search {
+  position: relative;
+  height: 50px;
+  margin: auto;
+}
+
+.search .input {
+  background-color: #13f78c;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+.btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.inut:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 200px;
+}
+
+.search.active .btn {
+  transform: translateX(198px);
+}
+/*  */
+@media (max-width: 700px) {
+  .content {
+    flex-direction: column;
+    margin: 15px;
+    border-radius: 15px;
+  }
+  .img-content {
+    display: block;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  #show-img {
+    width: 100%;
+  }
+  .text-content {
+    max-width: 80%;
+    margin: auto;
+  }
+  header {
+    margin: 0;
+    border-radius: 0;
+  }
+  .main-text-body {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .navbar-item {
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 730px) {
+  .navbar {
+    margin: 0 15px;
+  }
+  .main-text-body {
+    margin: 0 15px;
+  }
+  .navbar {
+    margin-bottom: 2rem;
+  }
+}
