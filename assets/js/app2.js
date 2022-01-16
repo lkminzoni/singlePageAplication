@@ -53,11 +53,14 @@ function getContent(id){
 
 function filterContent(element){
 
-            data.filter(e => {
+            data.filter((e,index) => {
                 if(e.title.toLowerCase().includes(element.target.value)){
                     img.src = e.img
                    textTitle.innerText = e.title;
                    textBody.innerText = e.body
+
+
+                   activeClass(index)
 
                 }else{
                     return
@@ -72,11 +75,14 @@ function activeClass(item){
            e.classList.remove('active')
        }
    })
-
-   if(item.target.classList.contains('navbar-item')){
-        item.target.classList.add('active')
-   }else if(item.target.parentElement.classList.contains('navbar-item')){
-    item.target.parentElement.classList.add('active')
+   if(item.value === ''){
+       if(item.target.classList.contains('navbar-item')){
+            item.target.classList.add('active')
+       }else if(item.target.parentElement.classList.contains('navbar-item')){
+        item.target.parentElement.classList.add('active')
+       }
+   }else{
+       btnToText[item].classList.add('active')
    }
 }
 
